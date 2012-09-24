@@ -61,16 +61,19 @@ switch ($page) {
 	case 'bus':
 		if ($included_layout) {
 			echo site_header('Find a Bus');
+			include 'bus.php';
 		}
 		break;
 	case 'taxi':
 		if ($included_layout) {
 			echo site_header('Find a Taxi');
+			include 'taxi.php';
 		}
 		break;
 	case 'plan':
 		if ($included_layout) {
 			echo site_header('Plan Your Trip');
+			include 'plan.php';
 		}
 		break;
 	default:
