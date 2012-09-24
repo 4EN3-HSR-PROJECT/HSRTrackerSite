@@ -28,7 +28,7 @@ if ($included_interface) {
 }
 
 if ($mobile) {
-	echo '<head><meta http-equiv="Refresh" content="1;url=http://www.w3schools.com"></head>';
+	echo '<head><meta http-equiv="Refresh" content="1;url=WebApp"></head>';
 	die();
 }
 
