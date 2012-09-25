@@ -1,5 +1,5 @@
 <div id="house">
-<div id="header"></div>
+<!--<div id="header"></div>-->
 
 <div id="content">
 <div id="mainContent">
