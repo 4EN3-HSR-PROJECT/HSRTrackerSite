@@ -14,9 +14,9 @@ function getBusStops() {
 function dropDown($fname, $array) {
 	$output = '<select name="' . $fname . '">';
 	foreach ($array as $element) {
-		$output .= '<option value="' . $element . '">'
+		$output .= '<option value="' . $element . '">';
 		$output .= $element;
-		$output .= '</option>'
+		$output .= '</option>';
 	}
 	$output .= '</select>';
 }
