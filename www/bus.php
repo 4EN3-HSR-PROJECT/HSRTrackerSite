@@ -24,11 +24,22 @@ function dropDown($fname, $array) {
 
 ?>
 
-<form action=''>
-<table>
-<tr>
-	<td>Bus Stop #:</td>
-	<td><?php echo dropDown('bus_stops',getBusStops()); ?></td>
-</tr>
-</table>
-</form>
+<div id="content">
+<div id="mainContent">
+
+<div id="menu">
+	FIND A BUS
+</div>
+<div id="written">
+	<form action=''>
+	<table>
+	<tr>
+		<td>Bus Stop #:</td>
+		<td><?php echo dropDown('bus_stops',getBusStops()); ?></td>
+	</tr>
+	</table>
+	</form>
+</div>
+
+</div>
+</div>

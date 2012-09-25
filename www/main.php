@@ -1,5 +1,4 @@
-<div id="house">
-<!--<div id="header"></div>-->
+<!--<div id="house">-->
 
 <div id="content">
 <div id="mainContent">
@@ -57,4 +56,4 @@ Last name: <input type="text" name="lastname">
 
 </div>
 
-</div>
+<!--</div>-->
