@@ -27,7 +27,7 @@ function dropDown($fname, $array) {
 <table>
 <tr>
 	<td>Bus Stop #:</td>
-	<td><?php echo dropDown(getBusStops()); ?></td>
+	<td><?php echo dropDown('bus_stops',getBusStops()); ?></td>
 </tr>
 </table>
 </form>
