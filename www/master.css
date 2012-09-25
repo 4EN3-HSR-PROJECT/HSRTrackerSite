@@ -58,6 +58,19 @@ color:black;
 font-family:sans-serif;
 }
 
+#menubar
+{
+background: url(menu.jpg) no-repeat scroll left top;
+height:50px;
+width:900px;
+padding-left:75px;
+padding-top:5px;
+font-size:30px;
+color:black;
+font-family:sans-serif;
+text-align:center;
+}
+
 #sidebar
 {
 width:340px;

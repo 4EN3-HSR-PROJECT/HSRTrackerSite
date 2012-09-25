@@ -35,7 +35,7 @@ function site_header ($title) {
 }
 
 function site_menubar ($selected) {
-	$page_menubar = '<div id="header">
+	$page_menubar = '<div id="menubar">
 					<table cellpadding=8><tr>
 					<td>
 						<a href="?page=main">

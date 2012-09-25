@@ -1,6 +1,6 @@
 <!--<div id="house">-->
 
-<div id="content">
+<!--<div id="content">-->
 <div id="mainContent">
 <img src="featureImage.jpg">
 <div id="menu">
@@ -54,6 +54,6 @@ Last name: <input type="text" name="lastname">
 
 </div>
 
-</div>
+<!--</div>-->
 
 <!--</div>-->

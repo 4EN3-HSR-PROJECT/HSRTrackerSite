@@ -24,7 +24,6 @@ function dropDown($fname, $array) {
 
 ?>
 
-<div id="content">
 <div id="mainContent">
 
 <div id="menu">
@@ -41,5 +40,4 @@ function dropDown($fname, $array) {
 	</form>
 </div>
 
-</div>
 </div>

@@ -85,8 +85,10 @@ switch ($page) {
 		die();
 }
 echo '<div id="house">';
+echo '<div id="content">';
 echo site_menubar(3);
 include $page . '.php';
+echo '</div>';
 echo '</div>';
 
 ?></body>
