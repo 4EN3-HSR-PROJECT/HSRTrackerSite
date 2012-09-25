@@ -36,7 +36,7 @@ if ($mobile) {
  * Get Form Variables *
  **********************/
  // Default Values
- $page = 'bus';
+ $page = 'main';
  $bus_stop = 0;
  $bus_route = 0;
  $taxi_phone = '';
@@ -58,23 +58,29 @@ if (isset($_REQUEST['taxi_phone'])) {
  * Generate Page *
  *****************/
 switch ($page) {
+	case 'main':
+		if ($included_layout) {
+			echo site_header('Get the App');
+		}
+		include 'main.php';
+		break;
 	case 'bus':
 		if ($included_layout) {
 			echo site_header('Find a Bus');
-			include 'bus.php';
 		}
+		include 'bus.php';
 		break;
 	case 'taxi':
 		if ($included_layout) {
 			echo site_header('Find a Taxi');
-			include 'taxi.php';
 		}
+		include 'taxi.php';
 		break;
 	case 'plan':
 		if ($included_layout) {
 			echo site_header('Plan Your Trip');
-			include 'plan.php';
 		}
+		include 'plan.php';
 		break;
 	default:
 		echo 'An error has occurred!<br>';
