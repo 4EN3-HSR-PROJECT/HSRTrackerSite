@@ -4,7 +4,7 @@ function getBusStops() {
 	// Connect to MySQL server
 	$stops = array(
 		"1000 - Main at Emerson",
-		"1001 - Main at ",
+		"1001 - Main at Haddon",
 		"1002 - Main at Hess",
 		"1003 - Main at John",
 		"1004 - King at Sterling");

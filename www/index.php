@@ -61,44 +61,33 @@ switch ($page) {
 	case 'main':
 		if ($included_layout) {
 			echo site_header('Home');
-			echo site_menubar(0);
 		}
-		echo '<div id="house">';
-		include 'main.php';
-		echo '</div>';
 		break;
 	case 'bus':
 		if ($included_layout) {
 			echo site_header('Find a Bus');
-			echo site_menubar(1);
 		}
-		echo '<div id="house">';
-		include 'bus.php';
-		echo '</div>';
 		break;
 	case 'taxi':
 		if ($included_layout) {
 			echo site_header('Find a Taxi');
-			echo site_menubar(2);
 		}
-		echo '<div id="house">';
-		include 'taxi.php';
-		echo '</div>';
 		break;
 	case 'plan':
 		if ($included_layout) {
 			echo site_header('Plan Your Trip');
-			echo site_menubar(3);
 		}
-		echo '<div id="house">';
-		include 'plan.php';
-		echo '</div>';
 		break;
 	default:
 		echo 'An error has occurred!<br>';
 		echo 'An attempted access to tab "' . $page . '" has been performed, but the tab does not exist.<br>';
 		echo 'Please notify the website administrator!';
+		die();
 }
+echo '<div id="house">';
+echo site_menubar(3);
+include $page . '.php';
+echo '</div>';
 
 ?></body>
 </html>
