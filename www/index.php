@@ -60,25 +60,29 @@ if (isset($_REQUEST['taxi_phone'])) {
 switch ($page) {
 	case 'main':
 		if ($included_layout) {
-			echo site_header('Get the App');
+			echo site_header('Home');
+			echo site_menubar(0);
 		}
 		include 'main.php';
 		break;
 	case 'bus':
 		if ($included_layout) {
 			echo site_header('Find a Bus');
+			echo site_menubar(1);
 		}
 		include 'bus.php';
 		break;
 	case 'taxi':
 		if ($included_layout) {
 			echo site_header('Find a Taxi');
+			echo site_menubar(2);
 		}
 		include 'taxi.php';
 		break;
 	case 'plan':
 		if ($included_layout) {
 			echo site_header('Plan Your Trip');
+			echo site_menubar(3);
 		}
 		include 'plan.php';
 		break;

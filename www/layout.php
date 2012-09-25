@@ -30,8 +30,36 @@ function site_header ($title) {
 					</tr></table>
 					</div>';
 	return ($page_header
-	      . $page_title
-		  . $page_menubar);
+	      /*. $page_title
+		  . $page_menubar*/);
+}
+
+function site_menubar ($selected) {
+	$page_menubar = '<div align="center">
+					<table cellpadding=8><tr>
+					<td>
+						<a href="?page=main">
+						Home
+						</a>
+					</td>
+					<td>
+						<a href="?page=bus">
+						Find a Bus
+						</a>
+					</td>
+					<td>
+						<a href="?page=taxi">
+						Find a Taxi
+						</a>
+					</td>
+					<td>
+						<a href="?page=plan">
+						Plan your Trip
+						</a>
+					</td>
+					</tr></table>
+					</div>';
+	return $page_menubar;
 }
 
 
