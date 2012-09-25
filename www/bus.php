@@ -19,6 +19,7 @@ function dropDown($fname, $array) {
 		$output .= '</option>';
 	}
 	$output .= '</select>';
+	return $output;
 }
 
 ?>
