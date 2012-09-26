@@ -60,11 +60,20 @@ font-family:sans-serif;
 
 #menubar
 {
-background: url(menu.jpg) no-repeat scroll left top;
-height:50px;
-width:900px;
+background: url(menubar.jpg) no-repeat scroll left top;
+height:55px;
+width:825px;
 padding-left:75px;
-padding-top:5px;
+padding-top:0px;
+font-size:30px;
+color:black;
+font-family:sans-serif;
+text-align:center;
+}
+
+#menubar_entry
+{
+padding-right:20px;
 font-size:30px;
 color:black;
 font-family:sans-serif;
