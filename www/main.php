@@ -32,7 +32,8 @@ First name: <input type="text" name="firstname"><br>
 Last name: <input type="text" name="lastname">
 <p/>
 <input type="checkbox" name="vehicle" value="Bike">I have a bike<br>
-<input type="checkbox" name="vehicle" value="Car">I have a car 
+<input type="checkbox" name="vehicle" value="Car">I have a car<br>
+<input type="submit" value="Submit">
 </form> 
 </div>
 </div>
@@ -40,14 +41,14 @@ Last name: <input type="text" name="lastname">
 <div id="sidebar">
 
 <div id="sidebarWritten">
-<img src="ios.jpg"/>
+<img src="ios.png" width="100%"/>
 </div>
 <div id="sidebarWritten">
-<img src="android.jpg"/>
+<img src="android.png" width="100%"/>
 </div>
 <div id="sidebarWritten">
 <img width="75%" src="http://vervely.com/wp-content/uploads/2012/05/facebook-like.png"/>
-<br/>
+<br>
 <img width="75%" src="http://verify.im/images/Twitter_button.jpg"/>
 </div>
 

@@ -5,6 +5,11 @@ background-repeat:no-repeat;
 color:red;
 }
 
+table
+{
+color:black
+}
+
 #house
 {
 margin: 0 auto;
