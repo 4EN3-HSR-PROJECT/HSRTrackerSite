@@ -1,15 +1,13 @@
 <html>
 <?php
 
-/********************
- * Import Libraries *
- ********************/
+/************************
+ * Import PHP Libraries *
+ ************************/
 include 'interface_check.php';
 $included_interface = function_exists('getInterface');
 include 'layout.php';
 $included_layout = function_exists('site_header');
-
-?><body><?php
 
 /***********************
  * Determine Interface *
@@ -84,6 +82,7 @@ switch ($page) {
 		echo 'Please notify the website administrator!';
 		die();
 }
+echo '<body>';
 echo '<div id="house">';
 echo '<div id="header"></div>';
 echo '<div id="content">';
