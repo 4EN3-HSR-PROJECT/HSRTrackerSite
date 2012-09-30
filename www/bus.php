@@ -1,36 +1,49 @@
-<?php
-
-function dropDown($fname, $array, $action) {
-	$output = '<select name="' . $fname . '"';
-	if ($action != '') {
-		$output .= ' ' . $action;
-	}
-	$output .= '>';
-	$output .= '<option value="" style="display:none;"></option>';
-	foreach ($array as $element) {
-		$output .= '<option value="' . $element . '">';
-		$output .= $element;
-		$output .= '</option>';
-	}
-	$output .= '</select>';
-	return $output;
-}
-
-?>
-
 <script>
-function getBusRoutes (stop) {
-	if (stop == "") {
-		return new Array();
+function getDropdown(div,param = "",change = "") {
+	// Initialize page getters
+	var sqlconnect;
+	var dropdown;
+	if (window.XMLHttpRequest) {
+		sqlconnect = new XMLHttpRequest();
+		dropdown = new XMLHttpRequest();
+	} else {
+		sqlconnect = new ActiveXObject("Microsoft.XMLHTTP");
+		dropdown = new ActiveXObject("Microsoft.XMLHTTP");
 	}
-	var query = 'SELECT route_no FROM bus_routes WHERE stops LIKE "%' + stop + '%" ORDER BY route_no';
-	// Use imported MySQL data
-	var routes = new Array(
-		"1A",
-		"1B",
-		"3D",
-		"5A");
-	return routes;
+	
+	// Prepare actions for getting array
+	var serialArray;
+	sqlconnect.onreadystatechange = function() {
+		if (sqlconnect.readyState == 4 && sqlconnect.status == 200) {
+			// Send request for dropdown
+			serialarray = sqlconnect.responseText;
+			var address = "dropdown.php?array=" + serialarray;
+			if (change != "") {
+				address += "&alter=" + change;
+			}
+			if (param != "") {
+				address += "&" + param;
+			}
+			dropdown.open("GET",address,true);
+			dropdown.send();
+		}
+	}
+	
+	// Prepare actions for getting dropdown
+	dropdown.onreadystatechange = function() {
+		if (dropdown.readyState == 4 && dropdown.status == 200) {
+			//$('#' + div).innerHTML = dropdown.responseText;
+			document.getElementById(div).innerHTML = dropdown.responseText;
+		}
+	}
+	
+	// Send request for sql array
+	if (param == "") {
+		sqlconnect.open("GET","sqlConnector.php",true);
+	} else {
+		sqlconnect.open("GET","sqlConnector.php?" + param,true);
+	}
+	sqlconnect.send();
 }
 </script>
 
@@ -44,14 +57,18 @@ function getBusRoutes (stop) {
 	<table cellpadding="5">
 	<tr>
 		<td>Bus Stop #:</td>
-		<td><?php echo dropDown('bus_stops',getBusStops(),'onchange="getBusRoutes( $(\"#bus_stops\").val() )"'); ?></td>
+		<td><div name="stops" id="stops"><!--Stop Dropdown--></div></td>
 	</tr>
 	<tr>
 		<td>Bus Route:</td>
-		<td><?php echo dropDown('bus_routes',getBusRoutes(""),""); ?></td>
+		<td><div name="routes" id="routes"><!--Route Dropdown--></div></td>
 	</tr>
 	</table>
 	</form>
+	<script>
+		getDropdown("stops","request=stops","routes");
+		getDropdown("routes","request=routes");
+	</script>
 </div>
 
 </div>

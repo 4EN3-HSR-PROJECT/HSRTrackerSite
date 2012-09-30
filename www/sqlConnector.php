@@ -11,9 +11,8 @@ function getBusStops() {
 	if (!$result) {
 		die('Could not run query: ' . mysql_error());
 	}
-	$counter = 0;
-	while ($row = mysql_fetch_row($result)) {
-		$stops[$counter] = $row['number'];
+	while ($row = mysql_fetch_assoc($result)) {
+		$stops[] = $row['number'];
 	}
 	mysql_close($db);
 	return $stops;
@@ -23,7 +22,6 @@ function getBusRoutes($stop) {
 	if ($stop == "") {
 		return array();
 	}
-	echo 'Stop: ' . $stop . '...';
 	$query = 'SELECT bus_routes.number AS bus_number FROM bus_routes,route_stop,bus_stops WHERE bus_routes.number = route_no AND stop_no = bus_stops.number AND stop_no = ' . $stop . ' ORDER BY route_no';
 	$db = mysql_connect('24.141.132.41','fielding','');
 	if (!$db) {
@@ -34,12 +32,28 @@ function getBusRoutes($stop) {
 	if (!$result) {
 		die('Could not run query: ' . mysql_error());
 	}
-	$counter = 0;
-	while ($row = mysql_fetch_row($result)) {
-		$routes[$counter] = $row['number'];
+	while ($row = mysql_fetch_assoc($result)) {
+		$routes[] = $row['bus_number'];
 	}
 	mysql_close($db);
 	return $routes;
 }
+
+
+/******************
+ * Handle Request *
+ ******************/
+ if (isset($_GET['request'])) {
+	switch ($_GET['request']) {
+		case 'stops':
+			echo serialize(getBusStops());
+			break;
+		case 'routes':
+			if (isset($_GET['arg'])) {
+				echo serialize(getBusRoutes($_GET['arg']));
+			}
+			break;
+	}
+ }
 
 ?>
