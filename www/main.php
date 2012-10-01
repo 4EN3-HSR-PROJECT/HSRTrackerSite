@@ -3,38 +3,48 @@
 <!--<div id="content">-->
 <div id="mainContent">
 <img src="featureImage.jpg">
-<div id="menu">
-LATEST
-</div>
 
+<div id="menu">LATEST</div>
 <div id="written">
-Mobile apps are still in the works. There will be three apps: iOS, Android and web app.
-OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO sweet child O mine
+Announcements will be posted here, possibly from a RSS feed.
 </div>
 
-<div id="menu">
-BLOG
-</div>
-
+<div id="menu">BLOG</div>
 <div id="written">
-Her hair reminds of a one take place where as a child I hide
-and pray for the thunder and the clouds ,rain and other stuff to pass me by
+Blog info will be displayed here, assuming we have a blog.
 </div>
-<div id="menu">
-SURVEY
-</div>
+
+<div id="menu">SURVEY</div>
 <div id="written">
 <form action="">
-<input type="radio" name="sex" value="male">Male<br>
-<input type="radio" name="sex" value="female">Female
-<p/>
-First name: <input type="text" name="firstname"><br>
-Last name: <input type="text" name="lastname">
-<p/>
-<input type="checkbox" name="vehicle" value="Bike">I have a bike<br>
-<input type="checkbox" name="vehicle" value="Car">I have a car<br>
-<input type="submit" value="Submit">
-</form> 
+<table>
+<tr>
+	<td>First name:</td>
+	<td><input type="text" name="firstname"></td>
+</tr>
+<tr>
+	<td>Last name:</td>
+	<td><input type="text" name="lastname"></td>
+</tr>
+<tr>
+	<td>Gender:</td>
+	<td>
+		<input type="radio" name="sex" value="male">Male<br>
+		<input type="radio" name="sex" value="female">Female
+	</td>
+</tr>
+<tr>
+	<td>I have a...</td>
+	<td>
+		<input type="checkbox" name="vehicle" value="Bike">Bicycle<br>
+		<input type="checkbox" name="vehicle" value="Car">Car
+	</td>
+</tr>
+<tr>
+	<td colspan=2 align="center"><input type="submit" value="Submit"></td>
+</tr>
+</table>
+</form>
 </div>
 </div>
 

@@ -11,7 +11,7 @@ function getDropdown(div,param = "",change = "") {
 		dropdown = new ActiveXObject("Microsoft.XMLHTTP");
 	}
 	
-	// Prepare actions for getting array
+	// Function to be run upon sqlConenctor response
 	var serialArray;
 	sqlconnect.onreadystatechange = function() {
 		if (sqlconnect.readyState == 4 && sqlconnect.status == 200) {
@@ -29,10 +29,9 @@ function getDropdown(div,param = "",change = "") {
 		}
 	}
 	
-	// Prepare actions for getting dropdown
+	// Function to be run upon dropdown response
 	dropdown.onreadystatechange = function() {
 		if (dropdown.readyState == 4 && dropdown.status == 200) {
-			//$('#' + div).innerHTML = dropdown.responseText;
 			document.getElementById(div).innerHTML = dropdown.responseText;
 		}
 	}

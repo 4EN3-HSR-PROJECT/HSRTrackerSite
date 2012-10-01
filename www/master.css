@@ -7,7 +7,9 @@ color:red;
 
 table
 {
-color:black
+font-size:15px;
+color:black;
+font-family:sans-serif;
 }
 
 #house
