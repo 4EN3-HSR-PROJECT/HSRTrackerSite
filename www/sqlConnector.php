@@ -1,41 +1,63 @@
 <?php
 
 function getBusStops() {
+
+	// Formulate queries
+	$getdb = 'use hsr_data';
 	$query = 'SELECT number FROM bus_stops ORDER BY number';
-	$db = mysql_connect('24.141.132.41','fielding','');
-	if (!$db) {
-		die('Could not connect: ' . mysql_error());
+	
+	// Connect to database
+	include '/var/www/db.php';
+	$connected = mysql_query($getdb);
+	if (!$connected) {
+		die('Could not connect to database: ' . mysql_error());
 	}
-	mysql_select_db('hsr',$db);
+	
+	// Perform main query
 	$result = mysql_query($query);
 	if (!$result) {
 		die('Could not run query: ' . mysql_error());
 	}
+	
+	// Get results
 	while ($row = mysql_fetch_assoc($result)) {
 		$stops[] = $row['number'];
 	}
-	mysql_close($db);
+	
+	// Return results
 	return $stops;
 }
 
 function getBusRoutes($stop) {
+
+	// Check for empty stop parameter
 	if ($stop == "") {
 		return array();
 	}
-	$query = 'SELECT bus_routes.number AS bus_number FROM bus_routes,route_stop,bus_stops WHERE bus_routes.number = route_no AND stop_no = bus_stops.number AND stop_no = ' . $stop . ' ORDER BY route_no';
-	$db = mysql_connect('24.141.132.41','fielding','');
-	if (!$db) {
-		die('Could not connect: ' . mysql_error());
+	
+	// Formulate queries
+	$getdb = 'use hsr_data';
+	$query = 'SELECT bus_routes.number AS bus_number FROM bus_routes,bus_route_stops,bus_stops WHERE bus_routes.number = route_no AND stop_no = bus_stops.number AND stop_no = ' . $stop . ' ORDER BY route_no';
+	
+	//Connect to database
+	include '/var/www/db.php';
+	$connected = mysql_query($getdb);
+	if (!$connected) {
+		die('Could not connect to database: ' . mysql_error());
 	}
-	mysql_select_db('hsr',$db);
+	
+	// Perform query
 	$result = mysql_query($query);
 	if (!$result) {
 		die('Could not run query: ' . mysql_error());
 	}
+	
+	// Get results
 	while ($row = mysql_fetch_assoc($result)) {
 		$routes[] = $row['bus_number'];
 	}
-	mysql_close($db);
+	
+	// Return results
 	return $routes;
 }
 
