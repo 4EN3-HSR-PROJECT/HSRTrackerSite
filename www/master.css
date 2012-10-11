@@ -95,7 +95,6 @@ background: url(sidebarBg.jpg) repeat-x scroll left top;
 height:100%;
 }
 
-
 #sidebarWritten
 {
 margin-left:10px;
@@ -108,4 +107,9 @@ font-family:sans-serif;
 text-align:center;
 padding-left:50px;
 padding-top:20px;
+}
+
+#surveyanswer
+{
+margin-left:20px
 }
