@@ -77,7 +77,7 @@ if (!$connected) {
 }
 
 // Insert data into database
-$result = mysql_query();
+$result = mysql_query($query);
 if (!$result) {
 	die('Invalid query: ' . mysql_error() . '<br>'
 		. 'Full Query: ' . $query);
