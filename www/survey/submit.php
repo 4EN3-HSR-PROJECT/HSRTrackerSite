@@ -66,7 +66,7 @@ $query = "INSERT INTO {$db_table} (
 	{$_POST['length']},
 	{$_POST['phonecheck']},
 	{$_POST['home']},
-	{$email}
+	\"{$email}\"
 )";
 
 // Connect to database
@@ -82,5 +82,8 @@ if (!$result) {
 	die('Invalid query: ' . mysql_error() . '<br>'
 		. 'Full Query: ' . $query);
 }
+
+// Show completion message
+echo 'Your survey has been submitted successfully!';
 
 ?>

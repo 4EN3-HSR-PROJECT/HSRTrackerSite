@@ -15,9 +15,12 @@ function emailBox (status) {
 
 What do you use the bus for?
 <div id="surveyanswer">
-	<input type="checkbox" name="use_school"> School<br>
-	<input type="checkbox" name="use_work"> Work<br>
-	<input type="checkbox" name="use_other"> Other<br>
+	<input type="hidden" name="use_school" value=0>
+	<input type="checkbox" name="use_school" value=1> School<br>
+	<input type="hidden" name="use_work" value=0>
+	<input type="checkbox" name="use_work" value=1> Work<br>
+	<input type="hidden" name="use_other" value=0>
+	<input type="checkbox" name="use_other" value=1> Other<br>
 </div><br><br>
 
 How often do you take the bus per day?
@@ -34,10 +37,14 @@ How often do you take the bus per day?
 
 Which of the following buses do you take most often?
 <div id="surveyanswer">
-	<input type="checkbox" name="route_51"> 51 - University<br>
-	<input type="checkbox" name="route_1A"> 1A - King<br>
-	<input type="checkbox" name="route_5C"> 5C - Delaware<br>
-	<input type="checkbox" name="route_bline"> B-Line<br>
+	<input type="hidden" name="route_51" value="0">
+	<input type="checkbox" name="route_51" value=1> 51 - University<br>
+	<input type="hidden" name="route_1A" value="0">
+	<input type="checkbox" name="route_1A" value=1> 1A - King<br>
+	<input type="hidden" name="route_5C" value="0">
+	<input type="checkbox" name="route_5C" value=1> 5C - Delaware<br>
+	<input type="hidden" name="route_bline" value="0">
+	<input type="checkbox" name="route_bline" value=1> B-Line<br>
 </div><br><br>
 
 On average, how long is your bus ride?
