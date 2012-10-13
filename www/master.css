@@ -65,6 +65,19 @@ color:black;
 font-family:sans-serif;
 }
 
+
+#menuLarge
+{
+background: url(menuLarge.jpg) no-repeat scroll left top;
+height:50px;
+width:900px;
+padding-left:75px;
+padding-top:6px;
+font-size:30px;
+color:black;
+font-family:sans-serif;
+}
+
 #menubar
 {
 background: url(menubar.jpg) no-repeat scroll left top;

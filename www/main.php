@@ -10,7 +10,7 @@ Announcements will be posted here, possibly from a RSS feed.
 Blog info will be displayed here, assuming we have a blog.
 </div-->
 
-<div id="menu">SURVEY</div>
+<div id="menuLarge">SURVEY</div>
 <div id="written">
 <?php include 'survey/survey.php';?>
 </div>
