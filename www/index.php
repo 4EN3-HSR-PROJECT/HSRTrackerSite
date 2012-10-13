@@ -6,8 +6,8 @@
  ************************/
 include 'interface_check.php';
 $included_interface = function_exists('getInterface');
-// include 'layout.php';
-$included_layout = function_exists('site_header');
+//$include 'layout.php';
+//$included_layout = function_exists('site_header');
 
 /***********************
  * Determine Interface *
