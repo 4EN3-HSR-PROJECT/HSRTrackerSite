@@ -19,10 +19,10 @@ Blog info will be displayed here, assuming we have a blog.
 
 </div>
 
-
+// not displayed, because to emphasize the survery
 <!------
  Sidebar
- ------->
+
 <div id="sidebar">
 
 <div id="sidebarWritten">
@@ -36,6 +36,7 @@ Blog info will be displayed here, assuming we have a blog.
 <br>
 <img width="75%" src="http://verify.im/images/Twitter_button.jpg"/>
 </div>
+ ------->
 
 
 </div>
