@@ -18,10 +18,8 @@ Blog info will be displayed here, assuming we have a blog.
 <img src="featureImage.jpg">
 
 </div>
-
-// not displayed, because to emphasize the survery
 <!------
- Sidebar
+Sidebar not displayed, because to emphasize the survery
 
 <div id="sidebar">
 

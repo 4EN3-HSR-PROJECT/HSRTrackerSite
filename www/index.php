@@ -54,7 +54,7 @@ if (isset($_REQUEST['taxi_phone'])) {
 
 /*****************
  * Generate Page *
- *****************/
+ ****************
 switch ($page) {
 	case 'main':
 		if ($included_layout) {
@@ -82,6 +82,7 @@ switch ($page) {
 		echo 'Please notify the website administrator!';
 		die();
 }
+*/
 echo '<body>';
 echo '<div id="house">';
 echo '<div id="header"></div>';
