@@ -10,12 +10,20 @@ Announcements will be posted here, possibly from a RSS feed.
 Blog info will be displayed here, assuming we have a blog.
 </div-->
 
+<div id="menuLarge">ABOUT</div>
+<div id="written">
+The app tracks the actual location of the bus and let the passengers waiting at the bus stop know how far it is.
+</div>
+
 <div id="menuLarge">SURVEY</div>
 <div id="written">
 <?php include 'survey/survey.php';?>
 </div>
 
+<div id="menuLarge">SCREENSHOTS</div>
+<div id="written">
 <img src="featureImage.jpg">
+</div>
 
 </div>
 <!------

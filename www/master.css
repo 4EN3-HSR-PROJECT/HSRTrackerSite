@@ -36,7 +36,7 @@ height:180%;
 
 #mainContent
 {
-width:560px;
+width:900px;
 float:left;
 background-color:white;
 margin-bottom:20px;
@@ -44,7 +44,7 @@ margin-bottom:20px;
 
 #written
 {
-margin-left:10px;
+margin-left:20px;
 margin-right:10px;
 margin-top:5px;
 margin-bottom:5px;
@@ -72,9 +72,10 @@ background: url(menuLarge.jpg) no-repeat scroll left top;
 height:50px;
 width:900px;
 padding-left:75px;
-padding-top:6px;
+padding-top:10px;
 font-size:30px;
 color:black;
+font-weight:bold
 font-family:sans-serif;
 }
 
