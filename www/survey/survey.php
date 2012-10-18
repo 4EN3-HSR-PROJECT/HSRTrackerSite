@@ -97,14 +97,14 @@ How often do you take the bus per day?
 
 Which of the following buses do you take most often?
 <div id="surveyanswer">
-	<input type="hidden" name="route_51" value="0">
-	<input type="checkbox" name="route_51" value=1 <?php echo select_check('route_51') ?>> 51 - University<br>
 	<input type="hidden" name="route_1A" value="0">
 	<input type="checkbox" name="route_1A" value=1 <?php echo select_check('route_1A') ?>> 1A - King<br>
 	<input type="hidden" name="route_5C" value="0">
 	<input type="checkbox" name="route_5C" value=1 <?php echo select_check('route_5C') ?>> 5C - Delaware<br>
 	<input type="hidden" name="route_bline" value="0">
-	<input type="checkbox" name="route_bline" value=1 <?php echo select_check('route_bline') ?>> B-Line<br>
+	<input type="checkbox" name="route_bline" value=1 <?php echo select_check('route_bline') ?>> 10 - B-Line<br>
+	<input type="hidden" name="route_51" value="0">
+	<input type="checkbox" name="route_51" value=1 <?php echo select_check('route_51') ?>> 51 - University<br>
 </div><br><br>
 
 <?php if (error('length')) {echo '<img src="error.png">';} ?>
