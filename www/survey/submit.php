@@ -43,6 +43,7 @@ if (!isset($_POST['tester'])) {
  * Submit data to database *
  ***************************/
 function submit () {
+	global $email;
 	// Obtain database data
 	$db_name = 'hsr_stats';
 	$db_table = 'survey';
