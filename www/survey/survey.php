@@ -44,10 +44,20 @@
 			// Submit query
 			if (submit()) {
 				// Successful submission
-				echo 'Survey submitted successfully!';
+				echo '<table border=2 bordercolor=green cellpadding="10px">
+					<tr><td>
+					<img src="error.png">
+					Survey submitted successfully!
+					</td></tr>
+					</table>';
 			} else {
 				// Failed submission
-				echo 'Your submission could not be completed due to system maintenance. Please try again later.';
+				echo '<table border=2 bordercolor=red cellpadding="10px">
+					<tr><td>
+					<img src="error.png">
+					Your submission could not be completed due to system maintenance. Please try again later.
+					</td></tr>
+					</table>';
 			}
 			die();
 		} else {
