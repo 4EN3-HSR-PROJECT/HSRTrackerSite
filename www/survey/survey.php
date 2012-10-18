@@ -47,9 +47,17 @@
 				echo 'Survey submitted successfully!';
 			} else {
 				// Failed submission
-				echo 'An error has occurred! Please notify the system administrator.';
+				echo 'Your submission could not be completed due to system maintenance. Please try again later.';
 			}
 			die();
+		} else {
+			// Show error box at top
+			echo '<table border=2 bordercolor=red cellpadding="10px">
+				<tr><td>
+				<img src="error.png">
+				Your submission was incomplete and needs revision.
+				</td></tr>
+				</table>';
 		}
 	}
 ?>
