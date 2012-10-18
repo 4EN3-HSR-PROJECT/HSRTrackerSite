@@ -33,7 +33,7 @@ if ($_POST['home'] == "NULL") {
 if (!isset($_POST['tester'])) {
 	$error['tester'] = true;
 } else {
-	if ($email == "") {
+	if ($_POST['tester'] & $email == "") {
 		$error['email'] = true;
 	}
 }
