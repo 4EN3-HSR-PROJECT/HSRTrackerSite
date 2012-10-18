@@ -11,22 +11,39 @@ $error['tester'] = false;
 $error['email'] = false;
 
 
+/*****************************
+ * Get variables from $_POST *
+ *****************************/
+/*$freq = NULL;
+if (isset($_POST['freq'])) {$freq = $_POST['freq']}
+$length = NULL;
+if (isset($_POST['length'])) {$length = $_POST['length']}
+$home = NULL;
+if (isset($_POST['home'])) {$home = $_POST['home']}
+$phonecheck = NULL;
+if (isset($_POST['phonecheck'])) {$phonecheck = $_POST['phonecheck']}
+$tester = NULL;
+if (isset($_POST['tester'])) {$tester = $_POST['tester']}
+$email = NULL;
+if (isset($_POST['email'])) {$email = $_POST['email']}*/
+
+
 /********************
  * Check for errors *
  ********************/
 if ($_POST['freq'] == NULL) {
 	$error['freq'] = true;
 } else if ($_POST['length'] == NULL) {
-	$error['length'];
+	$error['length'] = true;
 } else if ($_POST['home'] == NULL) {
-	$error['home'];
+	$error['home'] = true;
 } else if ($_POST['phonecheck'] == NULL) {
-	$error['phonecheck'];
+	$error['phonecheck'] = true;
 } else if (!isset($_POST['tester'])) {
-	$error['tester'];
+	$error['tester'] = true;
 } else if ($_POST['tester']) {
 	if (!isset($_POST['email']) | $_POST['email'] == "") {
-		$error['email'];
+		$error['email'] = true;
 	}
 }
 
