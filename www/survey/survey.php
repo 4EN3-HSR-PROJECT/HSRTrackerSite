@@ -46,7 +46,6 @@
 				// Successful submission
 				echo '<table border=2 bordercolor=green cellpadding="10px">
 					<tr><td>
-					<img src="error.png">
 					Survey submitted successfully!
 					</td></tr>
 					</table>';
