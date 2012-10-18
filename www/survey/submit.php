@@ -1,37 +1,40 @@
 <?php
 
-$error_loc = NULL;
-function error ($loc) {
-	if ($error_loc == NULL) {
-		$error_loc = $loc;
-	}
-}
+/**************************
+ * Initialize error flags *
+ **************************/
+$error['freq'] = false;
+$error['length'] = false;
+$error['home'] = false;
+$error['phonecheck'] = false;
+$error['tester'] = false;
+$error['email'] = false;
 
 
 /********************
  * Check for errors *
  ********************/
-$email = 'NULL';
-if (isset($_POST['email'])) {
-	$email = $_POST['email'];
-}
-
 if ($_POST['freq'] == NULL) {
-	error('freq');
+	$error['freq'] = true;
 } else if ($_POST['length'] == NULL) {
-	error('length');
-} else if ($_POST['phonecheck'] == NULL) {
-	error('phonecheck');
+	$error['length'];
 } else if ($_POST['home'] == NULL) {
-	error('home');
+	$error['home'];
 } else if ($_POST['phonecheck'] == NULL) {
-	error('phonecheck');
+	$error['phonecheck'];
 } else if (!isset($_POST['tester'])) {
-	error('tester');
+	$error['tester'];
 } else if ($_POST['tester']) {
 	if (!isset($_POST['email']) | $_POST['email'] == "") {
-		error('email');
+		$error['email'];
 	}
+}
+
+// If an error has occurred, redirect back to the form
+if (in_array(true,$error)) {
+	echo 'Error<br>';
+} else {
+	echo 'No error<br>';
 }
 
 
