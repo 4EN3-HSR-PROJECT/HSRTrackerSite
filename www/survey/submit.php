@@ -11,12 +11,6 @@ $error['email'] = false;
 
 
 /********************
- * Secure variables *
- ********************/
-
-
-
-/********************
  * Check for errors *
  ********************/
 if ($_POST['freq'] == NULL | $_POST['freq'] == "NULL") {
@@ -70,7 +64,7 @@ function submit () {
 	$home = mysql_real_escape_string($_POST['home']);
 	$email = mysql_real_escape_string("");
 	if ($_POST['email'] != "") {
-		$email = mysql_real_escape_string($_POST['email']);
+		$email = '"' . mysql_real_escape_string($_POST['email']) . '"';
 	} else {
 		$email = "NULL";
 	}
