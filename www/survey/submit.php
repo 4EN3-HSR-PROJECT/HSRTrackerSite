@@ -13,9 +13,9 @@ $error['email'] = false;
 /********************
  * Check for errors *
  ********************/
-$email = "";
+$email = "null";
 if (isset($_POST['email'])) {
-	$email = $_POST['email'];
+	$email = '"' . $_POST['email'] . '"';
 }
 
 if ($_POST['freq'] == NULL | $_POST['freq'] == "NULL") {
@@ -47,6 +47,15 @@ function submit () {
 	// Obtain database data
 	$db_name = 'hsr_stats';
 	$db_table = 'survey';
+	
+	// Connect to database
+	include '/var/www/db.php';
+	$connected = mysql_query('use ' . $db_name);
+	if (!$connected) {
+		die('Could not connect to database: ' . mysql_error());
+	}
+	
+	// Prepare query
 	$query = "INSERT INTO {$db_table} (
 		use_school,
 		use_work,
@@ -61,26 +70,19 @@ function submit () {
 		home,
 		email
 	) VALUES (
-		{$_POST['use_school']},
-		{$_POST['use_work']},
-		{$_POST['use_other']},
-		{$_POST['freq']},
-		{$_POST['route_51']},
-		{$_POST['route_1A']},
-		{$_POST['route_5C']},
-		{$_POST['route_bline']},
-		{$_POST['length']},
-		{$_POST['phonecheck']},
-		{$_POST['home']},
-		\"{$email}\"
+		{mysql_real_escape_string($_POST['use_school'])},
+		{mysql_real_escape_string($_POST['use_work'])},
+		{mysql_real_escape_string($_POST['use_other'])},
+		{mysql_real_escape_string($_POST['freq'])},
+		{mysql_real_escape_string($_POST['route_51'])},
+		{mysql_real_escape_string($_POST['route_1A'])},
+		{mysql_real_escape_string($_POST['route_5C'])},
+		{mysql_real_escape_string($_POST['route_bline'])},
+		{mysql_real_escape_string($_POST['length'])},
+		{mysql_real_escape_string($_POST['phonecheck'])},
+		{mysql_real_escape_string($_POST['home'])},
+		{mysql_real_escape_string($email)}
 	)";
-
-	// Connect to database
-	include '/var/www/db.php';
-	$connected = mysql_query('use ' . $db_name);
-	if (!$connected) {
-		die('Could not connect to database: ' . mysql_error());
-	}
 
 	// Insert data into database
 	$result = mysql_query($query);
