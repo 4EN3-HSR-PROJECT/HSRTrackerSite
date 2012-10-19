@@ -170,6 +170,7 @@ Would you consider helping us test this app?
 	<input type="radio" name="tester" value=1 onclick="emailBox(1)" checked> Yes<br>
 	<input type="radio" name="tester" value=0 onclick="emailBox(0)"> No
 </div><br>
+<input type="hidden" name="email" value="">
 <div id="emailsect">
 <?php if (error('email')) {echo '<img src="error.png">';} ?>
 E-Mail Address:
