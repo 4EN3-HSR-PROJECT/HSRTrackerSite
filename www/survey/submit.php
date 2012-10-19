@@ -71,6 +71,8 @@ function submit () {
 	$email = mysql_real_escape_string("");
 	if ($_POST['email'] != "") {
 		$email = mysql_real_escape_string($_POST['email']);
+	} else {
+		$email = "NULL";
 	}
 	
 	// Prepare query
