@@ -101,6 +101,7 @@ function submit () {
 		{$home},
 		{$email}
 	)";
+	echo $query;
 
 	// Insert data into database
 	$result = mysql_query($query);
