@@ -101,14 +101,13 @@ function submit () {
 		{$home},
 		{$email}
 	)";
-	echo $query;
 
 	// Insert data into database
 	$result = mysql_query($query);
 	if (!$result) {
-		return false;
-		die('Invalid query: ' . mysql_error() . '<br>'
+		echo('Invalid query: ' . mysql_error() . '<br>'
 			. 'Full Query: ' . $query);
+		return false;
 	}
 
 	return true;
