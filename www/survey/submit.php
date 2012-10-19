@@ -107,8 +107,8 @@ function submit () {
 	// Insert data into database
 	$result = mysql_query($query);
 	if (!$result) {
-		echo('Invalid query: ' . mysql_error() . '<br>'
-			. 'Full Query: ' . $query);
+		//echo('Invalid query: ' . mysql_error() . '<br>'
+		//	. 'Full Query: ' . $query);
 		return false;
 	}
 
