@@ -68,7 +68,10 @@ function submit () {
 	$length = mysql_real_escape_string($_POST['length']);
 	$phonecheck = mysql_real_escape_string($_POST['phonecheck']);
 	$home = mysql_real_escape_string($_POST['home']);
-	$email = mysql_real_escape_string($_POST['email']);
+	$email = mysql_real_escape_string("");
+	if ($_POST['email'] != "") {
+		$email = mysql_real_escape_string($_POST['email']);
+	}
 	
 	// Prepare query
 	$query = "INSERT INTO {$db_table} (
