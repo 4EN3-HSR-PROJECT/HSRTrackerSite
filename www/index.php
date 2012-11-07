@@ -1,6 +1,8 @@
 <html>
 <?php
 
+$allow_mobile_redirect = false;
+
 /************************
  * Import PHP Libraries *
  ************************/
@@ -15,7 +17,7 @@ $included_layout = function_exists('site_header');
 if ($included_interface) {
 	if (isMobile(getInterface())) {
 		// Mobile - redirect
-		$mobile = true;
+		$mobile = $allow_mobile_redirect;
 	} else {
 		// Desktop - do not redirect
 		$mobile = false;
