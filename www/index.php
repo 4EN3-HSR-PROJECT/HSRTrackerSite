@@ -26,7 +26,7 @@ if ($included_interface) {
 }
 
 if ($mobile) {
-	echo '<head><meta http-equiv="Refresh" content="1;url=http://m.hsrtracker.com;target=_parent"></head>';
+	echo '<head><meta http-equiv="Refresh" content="1;url=http://m.hsrtracker.com"></head>';
 	die();
 }
 
