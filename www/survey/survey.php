@@ -54,7 +54,11 @@
 				echo '<table border=2 bordercolor=red cellpadding="10px">
 					<tr><td>
 					<img src="error.png">
-					Your submission could not be completed due to system maintenance. Please try again later.
+					It appears that you have already taken the survey or someone else has used your e-mail
+					address. If this is not the case, please
+						<a href="mailto:hsrtracker@gmail.com">contact the website developer</a>
+					and he will fix it for you.<br><br>
+					Thank you for your patience!
 					</td></tr>
 					</table>';
 			}
