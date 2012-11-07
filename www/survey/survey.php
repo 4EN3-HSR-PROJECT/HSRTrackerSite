@@ -56,8 +56,8 @@
 					<img src="error.png">
 					It appears that you have already taken the survey or someone else has used your e-mail
 					address. If this is not the case, please
-						<a href="mailto:hsrtracker@gmail.com">contact the website developer</a>
-					and he will fix it for you.<br><br>
+						<a href="mailto:hsrtracker@gmail.com">contact us</a>
+					and we will fix it for you.<br><br>
 					Thank you for your patience!
 					</td></tr>
 					</table>';
