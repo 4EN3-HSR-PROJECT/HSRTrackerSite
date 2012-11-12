@@ -90,22 +90,42 @@ while ($row = mysql_fetch_assoc($result)) {
 	
 	// Route_51
 	$output .= "<td>";
-	$output .= bool($row['route_51']);
+	//$output .= bool($row['route_51']);
+	if ($row['route_51']) {
+		$output .= 'Route 51';
+	} else {
+		$output .= '-';
+	}
 	$output .= "</td>";
 	
 	// Route_1A
 	$output .= "<td>";
-	$output .= bool($row['route_1A']);
+	//$output .= bool($row['route_1A']);
+	if ($row['route_1A']) {
+		$output .= 'Route 1A';
+	} else {
+		$output .= '-';
+	}
 	$output .= "</td>";
 	
 	// Route_5C
 	$output .= "<td>";
-	$output .= bool($row['route_5C']);
+	//$output .= bool($row['route_5C']);
+	if ($row['route_5C']) {
+		$output .= 'Route 5C';
+	} else {
+		$output .= '-';
+	}
 	$output .= "</td>";
 	
 	// Route_BLine
 	$output .= "<td>";
-	$output .= bool($row['route_bline']);
+	//$output .= bool($row['route_bline']);
+	if ($row['route_bline']) {
+		$output .= 'B-Line';
+	} else {
+		$output .= '-';
+	}
 	$output .= "</td>";
 	
 	// Length
