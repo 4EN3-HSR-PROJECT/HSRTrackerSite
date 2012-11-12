@@ -54,17 +54,32 @@ while ($row = mysql_fetch_assoc($result)) {
 	
 	// Use_School
 	$output .= "<td>";
-	$output .= bool($row['use_school']);
+	//$output .= bool($row['use_school']);
+	if ($row['use_school']) {
+		$output .= 'School';
+	} else {
+		$output .= '-';
+	}
 	$output .= "</td>";
 	
 	// Use_Work
 	$output .= "<td>";
-	$output .= bool($row['use_work']);
+	//$output .= bool($row['use_work']);
+	if ($row['use_work']) {
+		$output .= 'Work';
+	} else {
+		$output .= '-';
+	}
 	$output .= "</td>";
 	
 	// Use_Other
 	$output .= "<td>";
-	$output .= bool($row['use_other']);
+	//$output .= bool($row['use_other']);
+	if ($row['use_other']) {
+		$output .= 'Other';
+	} else {
+		$output .= '-';
+	}
 	$output .= "</td>";
 	
 	// Freq
@@ -72,15 +87,19 @@ while ($row = mysql_fetch_assoc($result)) {
 	switch ($row['freq']) {
 		case 0:
 			$output .= "0";
+			$output .= " daily";
 			break;
 		case 1:
 			$output .= "1-3";
+			$output .= " daily";
 			break;
 		case 4:
 			$output .= "4-6";
+			$output .= " daily";
 			break;
 		case 7:
 			$output .= "7+";
+			$output .= " daily";
 			break;
 		case -1:
 			$output .= "Few/week";
@@ -137,6 +156,7 @@ while ($row = mysql_fetch_assoc($result)) {
 		default:
 			$output .= $row['length'];
 	}
+	$output .= " min";
 	$output .= "</td>";
 	
 	// Phonecheck
