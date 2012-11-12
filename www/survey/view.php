@@ -58,7 +58,7 @@ while ($row = mysql_fetch_assoc($result)) {
 	if ($row['use_school']) {
 		$output .= 'School';
 	} else {
-		$output .= '-';
+		$output .= '<center>-</center>';
 	}
 	$output .= "</td>";
 	
@@ -68,7 +68,7 @@ while ($row = mysql_fetch_assoc($result)) {
 	if ($row['use_work']) {
 		$output .= 'Work';
 	} else {
-		$output .= '-';
+		$output .= '<center>-</center>';
 	}
 	$output .= "</td>";
 	
@@ -78,7 +78,7 @@ while ($row = mysql_fetch_assoc($result)) {
 	if ($row['use_other']) {
 		$output .= 'Other';
 	} else {
-		$output .= '-';
+		$output .= '<center>-</center>';
 	}
 	$output .= "</td>";
 	
@@ -113,7 +113,7 @@ while ($row = mysql_fetch_assoc($result)) {
 	if ($row['route_51']) {
 		$output .= 'Route 51';
 	} else {
-		$output .= '-';
+		$output .= '<center>-</center>';
 	}
 	$output .= "</td>";
 	
@@ -123,7 +123,7 @@ while ($row = mysql_fetch_assoc($result)) {
 	if ($row['route_1A']) {
 		$output .= 'Route 1A';
 	} else {
-		$output .= '-';
+		$output .= '<center>-</center>';
 	}
 	$output .= "</td>";
 	
@@ -133,7 +133,7 @@ while ($row = mysql_fetch_assoc($result)) {
 	if ($row['route_5C']) {
 		$output .= 'Route 5C';
 	} else {
-		$output .= '-';
+		$output .= '<center>-</center>';
 	}
 	$output .= "</td>";
 	
@@ -143,7 +143,7 @@ while ($row = mysql_fetch_assoc($result)) {
 	if ($row['route_bline']) {
 		$output .= 'B-Line';
 	} else {
-		$output .= '-';
+		$output .= '<center>-</center>';
 	}
 	$output .= "</td>";
 	
@@ -208,6 +208,8 @@ while ($row = mysql_fetch_assoc($result)) {
 	$output .= "<td>";
 	if ($row['email'] != "") {
 		$output .= "<i>(hidden)</i>";
+	} else {
+		$output .= '<center>-</center>';
 	}
 	$output .= "</td>";
 	
