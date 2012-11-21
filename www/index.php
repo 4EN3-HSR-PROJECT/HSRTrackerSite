@@ -1,7 +1,7 @@
 <html>
 <?php
 
-$allow_mobile_redirect = false;
+$allow_mobile_redirect = true;
 
 /************************
  * Import PHP Libraries *
